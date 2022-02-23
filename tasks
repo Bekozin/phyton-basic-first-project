@@ -1,0 +1,40 @@
+
+# verilen [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+# istenen [1,'a','cat',2,3,'dog',4,5] 
+
+B = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+A = []
+
+for eleman in B:
+    if type(eleman) == int:
+        A.append(eleman)
+    elif type(eleman) != int:
+        A.extend(eleman)
+        
+        
+#Task 2
+
+#2- Verilen listenin içindeki elemanları tersine döndüren bir fonksiyon yazın. 
+#   Eğer listenin içindeki elemanlar da liste içeriyorsa onların elemanlarını da tersine döndürün. Örnek olarak:
+
+# input: [[1, 2], [3, 4], [5, 6, 7]]
+
+# output: [[[7, 6, 5], [4, 3], [2, 1]]
+
+A = [[1, 2], [3, 4], [5, 6, 7]]
+B = []
+C = []
+
+for Eleman in A:
+    if type(Eleman) == list:
+        B.append(list(reversed(Eleman)))
+        
+        
+def Ters(B):
+    B.reverse()
+    return B
+
+print(Ters(B))
+        
+        
+        
